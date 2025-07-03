@@ -28,7 +28,7 @@ class JoinChat:
         self: "pyrogram.Client",
         chat_id: Union[int, str]
     ) -> "types.Chat":
-        Join a group chat or channel.
+        """Join a group chat or channel.
 
         .. include:: /_includes/usable-by/users.rst
 
@@ -38,20 +38,20 @@ class JoinChat:
                 channel/supergroup (in the format @username) or a chat id of a linked chat (channel or supergroup).
 
         Returns:
-            :obj:`~pyrogram.types.Chat`: On success, a chat object is returned.
+            :obj:~pyrogram.types.Chat: On success, a chat object is returned.
 
         Example:
             .. code-block:: python
 
                 # Join chat via invite link
-                await app.join_chat("https://t.me/TheScamerhunter")
+                await app.join_chat("https://t.me/+AbCdEf0123456789")
 
                 # Join chat via username
                 await app.join_chat("pyrogram")
 
                 # Join a linked chat
                 await app.join_chat(app.get_chat("pyrogram").linked_chat.id)
-        
+        """
         match = self.INVITE_LINK_RE.match(str(chat_id))
 
         if match:
