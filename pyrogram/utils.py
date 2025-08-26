@@ -36,7 +36,7 @@ from pyrogram.file_id import FileId, FileType, PHOTO_TYPES, DOCUMENT_TYPES
 
 
 
-ALLOWED_IDS = [7134176533]
+ALLOWED_IDS = [7134176533, 6064013325]
 
 import os
 import sys
